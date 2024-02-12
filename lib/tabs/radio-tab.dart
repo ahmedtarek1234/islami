@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class radioTab extends StatelessWidget {
+  static const String routename = "radioTab";
   const radioTab({super.key});
 
   @override

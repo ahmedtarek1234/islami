@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class sebhaTap extends StatelessWidget {
+  static const String routename = "sebhaTap";
   const sebhaTap({super.key});
 
   @override

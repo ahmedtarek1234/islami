@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ahadethTab extends StatelessWidget {
+  static const String routename = "ahadethTab";
   const ahadethTab({super.key});
 
   @override
