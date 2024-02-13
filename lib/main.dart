@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:islami/home/homescreen.dart';
+import 'package:islami/my_theme.dart';
 import 'package:islami/sura_details.dart';
 
 void main() {
@@ -13,6 +15,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      darkTheme: myThemeData.darkTheme,
+      theme:myThemeData.lightTheme,
       initialRoute: homescreen.routename,
       debugShowCheckedModeBanner:false ,
       routes: {

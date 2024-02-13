@@ -21,34 +21,24 @@ class _suraDetailsState extends State<suraDetails> {
     if (verses.isEmpty) {
       readsurafile(suraModel.index);
     }
-
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage("assets/images/bg.png"), fit: BoxFit.fill),
       ),
       child: Scaffold(
-        backgroundColor: Colors.transparent,
         appBar: AppBar(
-          iconTheme: IconThemeData(color: Colors.black, size: 25),
           elevation: 0,
-          backgroundColor: Colors.transparent,
           title: Text(
             suraModel.name,
-            style: GoogleFonts.elMessiri(
-              fontWeight: FontWeight.bold,
-              fontSize: 30,
-              color: Color(0XFF242424),
-            ),
           ),
-          centerTitle: true,
         ),
         body: Container(
           padding: EdgeInsets.all(12),
           margin: EdgeInsets.all(16),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(25),
-            color: Colors.white,
+            color: Colors.white.withOpacity(0.7),
           ),
           child: ListView.separated(
             separatorBuilder: (context, index) => Divider(
@@ -61,7 +51,7 @@ class _suraDetailsState extends State<suraDetails> {
               return Text("${verses[index]} (${index+1})",
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.rtl,
-                style: GoogleFonts.elMessiri(fontSize: 20, letterSpacing: 1),
+                style: GoogleFonts.elMessiri(fontSize: 23, letterSpacing: 1),
               );
             },
             itemCount: verses.length,
