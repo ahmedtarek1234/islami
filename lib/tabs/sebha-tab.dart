@@ -38,7 +38,6 @@ class _sebhaTapState extends State<sebhaTap> {
             onTap: () {
               setState(() {
                 sebhaNum();
-                sebhaName();
               });
             },
             child: Image(
@@ -108,12 +107,10 @@ class _sebhaTapState extends State<sebhaTap> {
       counter++;
     } else {
       counter = 1;
-    }
-  }
-
-  void sebhaName() {
-    if (counter % 30 == 0) {
-      (currindex = currindex + 1) % currentNameIndex.length;
-    }
+      if (currindex==currentNameIndex.length-1){
+        currindex=0;
+      }else{
+      currindex++;
+    }}
   }
 }
