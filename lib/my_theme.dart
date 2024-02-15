@@ -5,7 +5,7 @@ class myThemeData {
   static ThemeData lightTheme = ThemeData(
       textTheme: TextTheme(
         bodyLarge:
-            GoogleFonts.elMessiri(fontSize: 30, fontWeight: FontWeight.bold),
+        GoogleFonts.elMessiri(fontSize: 30, fontWeight: FontWeight.bold),
         bodyMedium:
         GoogleFonts.elMessiri(fontSize: 25, fontWeight: FontWeight.w500),
         bodySmall:
