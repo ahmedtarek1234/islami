@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami/sura_details.dart';
-import 'package:islami/sura_model.dart';
+import 'package:islami/models/sura_model.dart';
 
 
 class quranTap extends StatelessWidget {

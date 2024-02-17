@@ -11,6 +11,7 @@ class sebhaTap extends StatefulWidget {
 }
 
 class _sebhaTapState extends State<sebhaTap> {
+  double rotate = 0.0;
   List<String> currentNameIndex = [
     "سبحان الله",
     "الحمدلله",
@@ -34,17 +35,22 @@ class _sebhaTapState extends State<sebhaTap> {
               height: 90,
             ),
           ),
-          InkWell(
-            onTap: () {
-              setState(() {
-                sebhaNum();
-              });
-            },
-            child: Image(
-              alignment: Alignment.centerLeft,
-              image: AssetImage("assets/images/b-sebha.png"),
-              height: 220,
-              width: 220,
+          AnimatedRotation(
+            turns: rotate,
+            duration: Duration(milliseconds: 500),
+            child: InkWell(
+              onTap: () {
+                setState(() {
+                  rotate += 1 / 33;
+                  sebhaNum();
+                });
+              },
+              child: Image(
+                alignment: Alignment.centerLeft,
+                image: AssetImage("assets/images/b-sebha.png"),
+                height: 220,
+                width: 220,
+              ),
             ),
           ),
           SizedBox(
@@ -107,10 +113,11 @@ class _sebhaTapState extends State<sebhaTap> {
       counter++;
     } else {
       counter = 1;
-      if (currindex==currentNameIndex.length-1){
-        currindex=0;
-      }else{
-      currindex++;
-    }}
+      if (currindex == currentNameIndex.length - 1) {
+        currindex = 0;
+      } else {
+        currindex++;
+      }
+    }
   }
 }

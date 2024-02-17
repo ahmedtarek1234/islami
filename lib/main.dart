@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:islami/ahadeth-details.dart';
 import 'package:islami/home/homescreen.dart';
 import 'package:islami/my_theme.dart';
 import 'package:islami/sura_details.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         suraDetails.routename : (context) => suraDetails(),
         sebhaTap.routename :(context) => sebhaTap(),
         radioTab.routename :(context) => radioTab(),
+        HadethDetails.routename :(context) => HadethDetails(),
 
 
 
