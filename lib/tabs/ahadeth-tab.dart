@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami/ahadeth-details.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../models/ahadeth-model.dart';
 
@@ -35,7 +36,7 @@ class _ahadethTabState extends State<ahadethTab> {
           color: Color(0XFFB7935F),
         ),
         Text(
-          "الأحاديث",
+          AppLocalizations.of(context)!.ahadeth,
           textAlign: TextAlign.center,
           style: GoogleFonts.elMessiri(
             fontSize: 25,
@@ -66,7 +67,7 @@ class _ahadethTabState extends State<ahadethTab> {
                   ahadethData[index].title,
                   textAlign: TextAlign.center,
                   style: GoogleFonts.inter(
-                      fontWeight: FontWeight.w400, fontSize: 25),
+                      fontWeight: FontWeight.w400, fontSize: 22),
                 ),
               );
             },

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami/sura_details.dart';
 import 'package:islami/models/sura_model.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 
 class quranTap extends StatelessWidget {
@@ -140,7 +141,7 @@ class quranTap extends StatelessWidget {
           color: Color(0XFFB7935F),
         ),
         Text(
-          "اسم السورة ",
+           AppLocalizations.of(context)!.suraName,
           textAlign: TextAlign.center,
           style: GoogleFonts.elMessiri(
             fontSize: 25,
@@ -172,10 +173,10 @@ class quranTap extends StatelessWidget {
               child: Text(
                 suraNames[index],
                 textAlign: TextAlign.center,
-                style: GoogleFonts.elMessiri(
+                style: GoogleFonts.inter(
                     color: Color(0XFF242424),
                     fontWeight: FontWeight.w400,
-                    fontSize: 25),
+                    fontSize: 22),
               ),
             );
           },

@@ -5,6 +5,7 @@ import 'package:islami/tabs/quran-tab.dart';
 import 'package:islami/tabs/radio-tab.dart';
 import 'package:islami/tabs/sebha-tab.dart';
 import 'package:islami/tabs/settings-tab.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class homescreen extends StatefulWidget {
   static const String routename = "homescreen";
@@ -36,7 +37,7 @@ class _homescreenState extends State<homescreen> {
         appBar: AppBar(
           elevation: 0,
           title: Text(
-            "إسلامي",
+           AppLocalizations.of(context)!.app_name,
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(
