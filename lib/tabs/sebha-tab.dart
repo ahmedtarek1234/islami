@@ -36,20 +36,23 @@ class _sebhaTapState extends State<sebhaTap> {
             ),
           ),
           AnimatedRotation(
+
             turns: rotate,
             duration: Duration(milliseconds: 500),
             child: InkWell(
               onTap: () {
                 setState(() {
                   rotate += 1 / 33;
+
                   sebhaNum();
                 });
               },
               child: Image(
                 alignment: Alignment.centerLeft,
-                image: AssetImage("assets/images/b-sebha.png"),
+                image: AssetImage("assets/images/b-sebha.png",),
                 height: 220,
                 width: 220,
+
               ),
             ),
           ),

@@ -1,5 +1,11 @@
 {
-  "app_name": "اسلامي",
+  "app_name": "إسلامي",
   "suraName": "اسم السورة",
-  "ahadeth": "الأحاديث"
+  "ahadeth": "الأحاديث",
+  "dark" : "داكن",
+  "light" : "مضي",
+  "arabic" : "عربي",
+  "english" : "انجلش",
+  "lang" : "اللغة",
+  "mode" : "نسق"
 }

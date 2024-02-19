@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:islami/ahadeth-details.dart';
+import 'package:islami/hadeth_details/ahadeth-details.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../models/ahadeth-model.dart';

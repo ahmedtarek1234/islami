@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:islami/providers/my_provider.dart';
 import 'package:islami/tabs/ahadeth-tab.dart';
 import 'package:islami/tabs/quran-tab.dart';
 import 'package:islami/tabs/radio-tab.dart';
 import 'package:islami/tabs/sebha-tab.dart';
 import 'package:islami/tabs/settings-tab.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 
 class homescreen extends StatefulWidget {
   static const String routename = "homescreen";
@@ -17,31 +19,32 @@ class homescreen extends StatefulWidget {
 }
 
 class _homescreenState extends State<homescreen> {
-  List<Widget>tabs=[
+  List<Widget> tabs = [
     quranTap(),
     sebhaTap(),
     radioTab(),
     ahadethTab(),
-    settingsTap()
+    SettingsTab()
   ];
   int index = 0;
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<MyProvider>(context);
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage("assets/images/bg.png"), fit: BoxFit.fill),
+            image: AssetImage(provider.getbackgroundPath()), fit: BoxFit.fill),
       ),
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
           title: Text(
-           AppLocalizations.of(context)!.app_name,
+            AppLocalizations.of(context)!.app_name,
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(
-          iconSize: 30,
+            iconSize: 30,
             currentIndex: index,
             onTap: (value) {
               index = value;
@@ -53,7 +56,6 @@ class _homescreenState extends State<homescreen> {
                     AssetImage("assets/images/ic-moshaf.png"),
                   ),
                   label: ""),
-
               BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage("assets/images/ic-sebha.png"),
@@ -69,13 +71,12 @@ class _homescreenState extends State<homescreen> {
                     AssetImage("assets/images/ic-quran.png"),
                   ),
                   label: ""),
-
               BottomNavigationBarItem(
                 icon: Icon(Icons.settings),
                 label: "",
               )
             ]),
-        body: tabs [index] ,
+        body: tabs[index],
       ),
     );
   }

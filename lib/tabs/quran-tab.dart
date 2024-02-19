@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:islami/sura_details.dart';
+import 'package:islami/sura_details/sura_details.dart';
 import 'package:islami/models/sura_model.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -173,10 +173,7 @@ class quranTap extends StatelessWidget {
               child: Text(
                 suraNames[index],
                 textAlign: TextAlign.center,
-                style: GoogleFonts.inter(
-                    color: Color(0XFF242424),
-                    fontWeight: FontWeight.w400,
-                    fontSize: 22),
+                style: Theme.of(context).textTheme.bodyMedium
               ),
             );
           },
